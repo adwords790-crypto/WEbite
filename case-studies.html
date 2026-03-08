@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Studies — Zenith Corporation</title>
+<meta name="description" content="Real-world case studies from Zenith Corporation across AI integration, hospitality feasibility, financial structuring, and operational SOPs.">
+<link rel="stylesheet" href="style.css">
+<style>
+.cs-grid{display:grid;grid-template-columns:1fr;gap:2px;background:#e5e4de;margin-top:3rem;}
+.cs-card{background:var(--white);padding:4rem;display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;align-items:start;scroll-margin-top:calc(var(--nav-h)+20px);}
+.cs-card:nth-child(even){background:var(--soft);}
+
+.cs-meta{}
+.cs-num{font-family:var(--serif);font-size:6rem;font-weight:700;color:#eeede8;line-height:1;margin-bottom:-.5rem;}
+.cs-sector{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block;}
+.cs-title{font-family:var(--serif);font-size:1.6rem;font-weight:500;color:var(--ink);line-height:1.2;margin-bottom:1.5rem;}
+
+.cs-result-box{background:var(--ink);padding:1.5rem;margin-top:1.5rem;}
+.cs-result-box .rb-label{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;display:block;}
+.cs-result-box .rb-text{font-size:.9rem;color:rgba(250,250,248,.7);line-height:1.6;font-family:var(--serif);font-style:italic;}
+
+.cs-body p{font-size:.93rem;color:var(--mid);line-height:1.85;margin-bottom:1.2rem;}
+.cs-points{list-style:none;margin-bottom:1.5rem;}
+.cs-points li{display:flex;gap:.8rem;align-items:flex-start;padding:.6rem 0;border-bottom:1px solid var(--line);font-size:.87rem;color:var(--mid);line-height:1.6;}
+.cs-points li:last-child{border-bottom:none;}
+.cs-points li::before{content:'◆';color:var(--gold);font-size:.38rem;flex-shrink:0;margin-top:.45rem;}
+.cs-tools{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.2rem;}
+.cs-tool{font-size:.65rem;letter-spacing:.1em;padding:.3rem .7rem;border:1px solid var(--line);color:var(--mid);}
+
+/* TESTI SECTION */
+.testi-section{background:var(--ink);padding:7rem 8vw;}
+.testi-section .testi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(200,169,110,.08);margin-top:3.5rem;}
+.tc{background:rgba(10,10,10,.7);padding:2.5rem;border:1px solid rgba(200,169,110,.06);transition:border-color .3s;cursor:none;}
+.tc:hover{border-color:rgba(200,169,110,.22);}
+.tc-q{font-family:var(--serif);font-size:1.1rem;font-style:italic;font-weight:300;color:rgba(250,250,248,.8);line-height:1.7;margin-bottom:1.2rem;}
+.tc-q::before{content:'\201C';font-size:2.2rem;color:var(--gold);line-height:0;vertical-align:-.45rem;margin-right:.15rem;}
+.tc-by{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(250,250,248,.28);}
+
+@media(max-width:1100px){
+  .cs-card{grid-template-columns:1fr;gap:2rem;padding:2.5rem;}
+  .testi-section .testi-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo-img" aria-label="Zenith Corporation">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" height="46" width="auto" style="display:block;">
+      <defs><clipPath id="gc"><circle cx="36" cy="40" r="24"/></clipPath></defs>
+      <rect x="1" y="1" width="238" height="70" rx="11" ry="11" fill="#1b1f3b" stroke="#2a2f5a" stroke-width="1.5"/>
+      <circle cx="36" cy="40" r="24" fill="white" clip-path="url(#gc)"/>
+      <g clip-path="url(#gc)">
+        <circle cx="36" cy="40" r="24" fill="white"/>
+        <path d="M12 50 Q24 66 60 50 Q52 64 36 65 Q20 64 12 50Z" fill="#f07820"/>
+        <path d="M12 40 Q24 30 60 40 Q60 50 12 50Z" fill="#0aabab"/>
+        <path d="M14 30 Q26 20 58 30 Q60 35 60 40 Q24 30 12 40 Q12 35 14 30Z" fill="#f07820"/>
+        <path d="M36 16 Q50 16 58 30 Q26 20 14 30 Q21 16 36 16Z" fill="#0aabab"/>
+      </g>
+      <circle cx="36" cy="40" r="24" fill="none" stroke="#ddd" stroke-width="0.5"/>
+      <g transform="translate(36,17)"><polygon points="0,-7 1.6,-2.2 6.6,-2.2 2.8,0.8 4.3,5.6 0,2.8 -4.3,5.6 -2.8,0.8 -6.6,-2.2 -1.6,-2.2" fill="#0aabab"/></g>
+      <text x="74" y="43" font-family="Arial Black,Franklin Gothic Heavy,Impact,sans-serif" font-weight="900" font-size="25" fill="white" letter-spacing="1.5">ZENITH</text>
+      <text x="75" y="57" font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="10.5" fill="#b0b8cc" letter-spacing="4">CORPORATION</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-phone"><a href="tel:+919083420420" style="color:inherit;text-decoration:none;">+91 9083 420 420</a></div>
+  <button class="nav-hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="tag light" style="margin-bottom:1.2rem;"><span>Case Studies & Projects</span></div>
+    <h1><em>Proven</em> Results<br>Across Industries</h1>
+    <p>Real engagements, measurable outcomes. All client information is anonymized to protect confidentiality unless explicit permission was granted.</p>
+  </div>
+</div>
+
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">AI Workflow Integration</span>
+    <span class="ticker-item">Resort Feasibility</span>
+    <span class="ticker-item">Financial Structuring</span>
+    <span class="ticker-item">Governance Frameworks</span>
+    <span class="ticker-item">Market Mapping</span>
+    <span class="ticker-item">Operational SOPs</span>
+    <span class="ticker-item">AI Workflow Integration</span>
+    <span class="ticker-item">Resort Feasibility</span>
+    <span class="ticker-item">Financial Structuring</span>
+    <span class="ticker-item">Governance Frameworks</span>
+    <span class="ticker-item">Market Mapping</span>
+    <span class="ticker-item">Operational SOPs</span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-head reveal">
+    <div class="tag">Our Work</div>
+    <h2 class="section-title">Six Engagements, <em>Measurable Impact</em></h2>
+  </div>
+  <div class="cs-grid">
+
+    <!-- CS1 -->
+    <div class="cs-card reveal" id="cs1">
+      <div class="cs-meta">
+        <div class="cs-num">01</div>
+        <span class="cs-sector">Financial Services · AI Integration</span>
+        <h2 class="cs-title">Strategic Advisory & AI Workflow Integration</h2>
+        <div class="cs-result-box">
+          <span class="rb-label">Key Result</span>
+          <p class="rb-text">Reduced turnaround time for data analysis and internal memos by 70%, freeing the core team for high-value client advisory.</p>
+        </div>
+      </div>
+      <div class="cs-body">
+        <p>A growing regional financial services provider required a formalized growth strategy and internal governance to scale operations. Zenith Corporation delivered a comprehensive management consultancy memorandum mapping out departmental hierarchies, risk protocols, and scalable workflows.</p>
+        <ul class="cs-points">
+          <li>Conducted a detailed organizational bottleneck analysis, identifying six key workflow inefficiencies</li>
+          <li>Integrated enterprise-grade AI and workflow tools to automate reporting, research, and scenario modeling</li>
+          <li>Built governance frameworks with clear departmental accountability and escalation paths</li>
+          <li>Deployed automated reporting dashboards eliminating manual weekly report creation</li>
+        </ul>
+        <div class="cs-tools">
+          <span class="cs-tool">Claude Pro</span>
+          <span class="cs-tool">Perplexity Pro</span>
+          <span class="cs-tool">Notion AI</span>
+          <span class="cs-tool">Power BI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CS2 -->
+    <div class="cs-card reveal" id="cs2">
+      <div class="cs-meta">
+        <div class="cs-num">02</div>
+        <span class="cs-sector">Hospitality · Feasibility Study</span>
+        <h2 class="cs-title">Upscale Resort Feasibility & Brand Positioning</h2>
+        <div class="cs-result-box">
+          <span class="rb-label">Key Result</span>
+          <p class="rb-text">Client received a clear roadmap for operator selection, area program, and investment planning — identifying an upper-upscale market gap for a 150-room development.</p>
+        </div>
+      </div>
+      <div class="cs-body">
+        <p>A regional developer wanted to build a 150-room premium resort but was uncertain about market positioning and brand strategy. Zenith conducted a comprehensive market and financial feasibility study from the ground up.</p>
+        <ul class="cs-points">
+          <li>Analyzed local hospitality supply, proposed guest room sizes, and amenity benchmarks</li>
+          <li>Identified an underserved gap in the upper-upscale segment and recommended suitable brand affiliations</li>
+          <li>Provided brand positioning recommendations and operator selection criteria</li>
+          <li>Delivered an investor-ready report for architects, financiers, and project stakeholders</li>
+        </ul>
+        <div class="cs-tools">
+          <span class="cs-tool">CoStar</span>
+          <span class="cs-tool">STR (Smith Travel Research)</span>
+          <span class="cs-tool">Claude Pro</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CS3 -->
+    <div class="cs-card reveal" id="cs3">
+      <div class="cs-meta">
+        <div class="cs-num">03</div>
+        <span class="cs-sector">Real Estate · Financial Structuring</span>
+        <h2 class="cs-title">Financial Structuring for Hospitality Investment</h2>
+        <div class="cs-result-box">
+          <span class="rb-label">Key Result</span>
+          <p class="rb-text">Projected IRR stabilized at 17% through book-value restructuring, enabling successful term loan financing for the development.</p>
+        </div>
+      </div>
+      <div class="cs-body">
+        <p>A private investment group faced high land market value that depressed projected returns on a hotel development. Zenith advised on restructuring the financial model using the land's book value, fundamentally improving investment viability.</p>
+        <ul class="cs-points">
+          <li>Built dynamic scenario planning models to stress-test multiple financial structures</li>
+          <li>Automated sensitivity analyses on debt-to-equity ratios and land valuation scenarios</li>
+          <li>Recommended book-value restructuring to stabilize IRR at a bankable 17%</li>
+          <li>Supported the client through term loan financing preparation</li>
+        </ul>
+        <div class="cs-tools">
+          <span class="cs-tool">Argus Enterprise</span>
+          <span class="cs-tool">Power BI</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CS4 -->
+    <div class="cs-card reveal" id="cs4">
+      <div class="cs-meta">
+        <div class="cs-num">04</div>
+        <span class="cs-sector">Real Estate · Governance</span>
+        <h2 class="cs-title">Consultant Governance & Project Frameworks</h2>
+        <div class="cs-result-box">
+          <span class="rb-label">Key Result</span>
+          <p class="rb-text">Delivered an error-free, scalable vendor procurement process with reduced project delays and automated workflow approvals.</p>
+        </div>
+      </div>
+      <div class="cs-body">
+        <p>Transitioning a large real estate project from concept to development requires strict governance and precise consultant coordination. Zenith designed the full governance infrastructure from onboarding to tracking.</p>
+        <ul class="cs-points">
+          <li>Designed onboarding checklists, tracking memos, and standardized RFP templates</li>
+          <li>Evaluated critical consultants including MEP experts, structural engineers, and interior designers</li>
+          <li>Migrated tracking systems to Notion AI and Asana, enabling automated workflow approvals</li>
+          <li>Established accountability frameworks with version-controlled documentation</li>
+        </ul>
+        <div class="cs-tools">
+          <span class="cs-tool">Notion AI</span>
+          <span class="cs-tool">Asana</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CS5 -->
+    <div class="cs-card reveal" id="cs5">
+      <div class="cs-meta">
+        <div class="cs-num">05</div>
+        <span class="cs-sector">Hospitality · Market Research</span>
+        <h2 class="cs-title">Competitive Market Mapping</h2>
+        <div class="cs-result-box">
+          <span class="rb-label">Key Result</span>
+          <p class="rb-text">Client gained predictive market insight, avoiding overbuilding and identifying the most profitable market segment for entry.</p>
+        </div>
+      </div>
+      <div class="cs-body">
+        <p>A client entering a regional hospitality market needed real-time insights into supply, demand, and competitor positioning before committing capital. Zenith delivered a comprehensive intelligence framework.</p>
+        <ul class="cs-points">
+          <li>Cataloged branded properties, ongoing developments, and future supply pipelines</li>
+          <li>Built interactive Power BI dashboards for continuous supply-demand tracking</li>
+          <li>Used Perplexity Pro for deep-dive research on zoning approvals and competitor projects</li>
+          <li>Identified the highest-opportunity segment to enter and recommended entry timing</li>
+        </ul>
+        <div class="cs-tools">
+          <span class="cs-tool">Power BI</span>
+          <span class="cs-tool">Perplexity Pro</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CS6 -->
+    <div class="cs-card reveal" id="cs6">
+      <div class="cs-meta">
+        <div class="cs-num">06</div>
+        <span class="cs-sector">Hospitality · Operations</span>
+        <h2 class="cs-title">Designing Operational SOPs to International Standards</h2>
+        <div class="cs-result-box">
+          <span class="rb-label">Key Result</span>
+          <p class="rb-text">A comprehensive, brand-compliant operational playbook delivered faster and more efficiently than traditional methods.</p>
+        </div>
+      </div>
+      <div class="cs-body">
+        <p>A standalone hospitality business needed internal workflows upgraded to international hotel standards. Zenith designed the full operational documentation suite using best-in-class digital tools for speed and clarity.</p>
+        <ul class="cs-points">
+          <li>Created departmental SOPs for banqueting, all-day dining, and front-of-house operations</li>
+          <li>Applied international hospitality standards benchmarked against branded hotel protocols</li>
+          <li>Deployed Lucidchart for visual workflow diagrams and Notion AI for documentation management</li>
+          <li>Trained internal teams to maintain and update SOPs independently</li>
+        </ul>
+        <div class="cs-tools">
+          <span class="cs-tool">Lucidchart</span>
+          <span class="cs-tool">Notion AI</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section">
+  <div style="position:relative;z-index:2;" class="reveal">
+    <div class="tag light"><span>Client Feedback</span></div>
+    <h2 class="section-title light">What Clients <em>Say</em></h2>
+  </div>
+  <div class="testi-grid reveal">
+    <div class="tc"><p class="tc-q">Zenith Corporation transformed the way we operate. Their ability to streamline workflows and implement robust SOPs has elevated our service standards and efficiency.</p><div class="tc-by">Senior Operations Executive · Confidential Hospitality Brand</div></div>
+    <div class="tc"><p class="tc-q">Their advisory on feasibility, financial modeling, and project structuring gave us the confidence to invest in a high-end resort with minimal risk.</p><div class="tc-by">Regional Developer · Hospitality Sector</div></div>
+    <div class="tc"><p class="tc-q">The team's expertise in compliance and operational governance is unmatched. We now have systems ensuring safety, regulatory alignment, and process transparency across all units.</p><div class="tc-by">Private Supply Chain Firm · Confidential</div></div>
+    <div class="tc"><p class="tc-q">Zenith's use of AI and digital tools allowed us to focus on strategy and client engagement while reducing manual reporting by more than half.</p><div class="tc-by">Financial Services Provider · Confidential</div></div>
+  </div>
+</section>
+
+<div class="cta-band reveal">
+  <h2>See how Zenith can deliver <em>measurable impact</em> for your business.</h2>
+  <a href="contact.html" class="btn-primary">Request a Case Study</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo-img" aria-label="Zenith Corporation">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" height="54" width="auto" style="display:block;margin-bottom:1.2rem;">
+        <defs><clipPath id="gc2"><circle cx="36" cy="40" r="24"/></clipPath></defs>
+        <rect x="1" y="1" width="238" height="70" rx="11" ry="11" fill="#1b1f3b" stroke="#2a2f5a" stroke-width="1.5"/>
+        <circle cx="36" cy="40" r="24" fill="white" clip-path="url(#gc2)"/>
+        <g clip-path="url(#gc2)">
+          <circle cx="36" cy="40" r="24" fill="white"/>
+          <path d="M12 50 Q24 66 60 50 Q52 64 36 65 Q20 64 12 50Z" fill="#f07820"/>
+          <path d="M12 40 Q24 30 60 40 Q60 50 12 50Z" fill="#0aabab"/>
+          <path d="M14 30 Q26 20 58 30 Q60 35 60 40 Q24 30 12 40 Q12 35 14 30Z" fill="#f07820"/>
+          <path d="M36 16 Q50 16 58 30 Q26 20 14 30 Q21 16 36 16Z" fill="#0aabab"/>
+        </g>
+        <circle cx="36" cy="40" r="24" fill="none" stroke="#ddd" stroke-width="0.5"/>
+        <g transform="translate(36,17)"><polygon points="0,-7 1.6,-2.2 6.6,-2.2 2.8,0.8 4.3,5.6 0,2.8 -4.3,5.6 -2.8,0.8 -6.6,-2.2 -1.6,-2.2" fill="#0aabab"/></g>
+        <text x="74" y="43" font-family="Arial Black,Franklin Gothic Heavy,Impact,sans-serif" font-weight="900" font-size="25" fill="white" letter-spacing="1.5">ZENITH</text>
+        <text x="75" y="57" font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="10.5" fill="#b0b8cc" letter-spacing="4">CORPORATION</text>
+      </svg>
+    </a>
+      <p class="footer-tagline">A boutique consultancy delivering operational strategy, AI integration, feasibility studies, and compliance advisory across India.</p>
+      <div class="footer-contact-info">
+        <div>501, 5th Floor, Shapath 1, SG Highway<br>Bodakdev, Ahmedabad, Gujarat 380054</div>
+        <div style="margin-top:.6rem;"><a href="tel:+919083420420" style="color:var(--gold);text-decoration:none;">+91 9083 420 420</a></div>
+        <div><a href="mailto:info@zencorp.co.in">info@zencorp.co.in</a></div>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Services</h5><ul>
+      <li><a href="services.html#ops">Operational Strategy</a></li>
+      <li><a href="services.html#hr">HR Advisory</a></li>
+      <li><a href="services.html#ai">AI Integration</a></li>
+      <li><a href="services.html#feasibility">Feasibility Studies</a></li>
+      <li><a href="services.html#compliance">Compliance</a></li>
+      <li><a href="services.html#strategy">Strategic Advisory</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Company</h5><ul>
+      <li><a href="about.html">About Zenith</a></li>
+      <li><a href="about.html#founder">The Founder</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Zenith Corporation. All Rights Reserved.</span>
+    <span>zencorp.co.in</span>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

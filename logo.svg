@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" width="240" height="72">
+  <defs>
+    <clipPath id="globeClip">
+      <circle cx="36" cy="40" r="24"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer dark navy rounded border -->
+  <rect x="1" y="1" width="238" height="70" rx="11" ry="11"
+        fill="#1b1f3b" stroke="#2a2f5a" stroke-width="1.5"/>
+
+  <!-- Globe base white -->
+  <circle cx="36" cy="40" r="24" fill="white" clip-path="url(#globeClip)"/>
+
+  <!-- Clipped globe bands -->
+  <g clip-path="url(#globeClip)">
+    <circle cx="36" cy="40" r="24" fill="white"/>
+    <!-- Bottom orange -->
+    <path d="M12 50 Q24 66 60 50 Q52 64 36 65 Q20 64 12 50Z" fill="#f07820"/>
+    <!-- Lower teal -->
+    <path d="M12 40 Q24 30 60 40 Q60 50 12 50Z" fill="#0aabab"/>
+    <!-- Middle orange -->
+    <path d="M14 30 Q26 20 58 30 Q60 35 60 40 Q24 30 12 40 Q12 35 14 30Z" fill="#f07820"/>
+    <!-- Upper teal -->
+    <path d="M36 16 Q50 16 58 30 Q26 20 14 30 Q21 16 36 16Z" fill="#0aabab"/>
+  </g>
+
+  <!-- Globe border -->
+  <circle cx="36" cy="40" r="24" fill="none" stroke="#ddd" stroke-width="0.5"/>
+
+  <!-- Star on top -->
+  <g transform="translate(36,17)">
+    <polygon points="0,-7 1.6,-2.2 6.6,-2.2 2.8,0.8 4.3,5.6 0,2.8 -4.3,5.6 -2.8,0.8 -6.6,-2.2 -1.6,-2.2" fill="#0aabab"/>
+  </g>
+
+  <!-- ZENITH text -->
+  <text x="74" y="43" font-family="'Arial Black','Franklin Gothic Heavy',Impact,sans-serif" font-weight="900" font-size="25" fill="white" letter-spacing="1.5">ZENITH</text>
+
+  <!-- CORPORATION text -->
+  <text x="75" y="57" font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="10.5" fill="#b0b8cc" letter-spacing="4">CORPORATION</text>
+</svg>

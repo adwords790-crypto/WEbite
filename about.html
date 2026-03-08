@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Zenith Corporation</title>
+<meta name="description" content="Learn about Zenith Corporation's founder-led advisory, global operational expertise, and boutique consultancy approach.">
+<link rel="stylesheet" href="style.css">
+<style>
+.founder-section{display:grid;grid-template-columns:1fr 1.6fr;gap:7rem;padding:8rem 8vw;align-items:start;}
+.founder-badge{
+  background:var(--ink);padding:3rem 2.5rem;position:sticky;top:100px;
+}
+.founder-badge .fb-name{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--white);line-height:1.15;margin-bottom:.6rem;}
+.founder-badge .fb-title{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;}
+.founder-badge .fb-line{height:1px;background:rgba(200,169,110,.15);margin-bottom:1.5rem;}
+.founder-badge .fb-fact{display:flex;gap:.8rem;margin-bottom:1rem;align-items:flex-start;}
+.founder-badge .fb-fact-icon{color:var(--gold);margin-top:.1rem;font-size:.9rem;}
+.founder-badge .fb-fact-text{font-size:.8rem;color:rgba(250,250,248,.5);line-height:1.5;}
+.founder-badge .fb-quote{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:rgba(250,250,248,.65);line-height:1.6;margin-top:1.8rem;padding-top:1.5rem;border-top:1px solid rgba(200,169,110,.12);}
+
+.founder-bio h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,3rem);font-weight:300;color:var(--ink);margin-bottom:1.8rem;line-height:1.1;}
+.founder-bio h2 em{font-style:italic;color:var(--gold);}
+.founder-bio p{font-size:.95rem;color:var(--mid);line-height:1.9;margin-bottom:1.3rem;}
+.founder-bio h3{font-family:var(--serif);font-size:1.4rem;font-weight:500;color:var(--ink);margin:2.5rem 0 1rem;}
+
+.timeline{margin:2rem 0;}
+.tl-item{display:grid;grid-template-columns:120px 1fr;gap:1.5rem;margin-bottom:1.8rem;padding-bottom:1.8rem;border-bottom:1px solid var(--line);}
+.tl-item:last-child{border-bottom:none;}
+.tl-period{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500;padding-top:.15rem;}
+.tl-content h4{font-family:var(--serif);font-size:1.05rem;font-weight:500;color:var(--ink);margin-bottom:.4rem;}
+.tl-content p{font-size:.83rem;color:var(--mid);line-height:1.65;}
+
+.shipping-certs{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;}
+.cert-badge{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .7rem;border:1px solid var(--line);color:var(--mid);}
+
+/* COMPANY VALUES */
+.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#e5e4de;}
+.val-card{background:var(--white);padding:2.8rem;cursor:none;transition:background .35s;}
+.val-card:hover{background:var(--soft);}
+.val-icon{font-size:1.8rem;margin-bottom:1.2rem;}
+.val-title{font-family:var(--serif);font-size:1.3rem;font-weight:500;margin-bottom:.7rem;}
+.val-text{font-size:.85rem;color:var(--mid);line-height:1.75;}
+
+@media(max-width:1100px){
+  .founder-section{grid-template-columns:1fr;gap:3rem;}
+  .founder-badge{position:static;}
+  .values-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo-img" aria-label="Zenith Corporation">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" height="46" width="auto" style="display:block;">
+      <defs><clipPath id="gc"><circle cx="36" cy="40" r="24"/></clipPath></defs>
+      <rect x="1" y="1" width="238" height="70" rx="11" ry="11" fill="#1b1f3b" stroke="#2a2f5a" stroke-width="1.5"/>
+      <circle cx="36" cy="40" r="24" fill="white" clip-path="url(#gc)"/>
+      <g clip-path="url(#gc)">
+        <circle cx="36" cy="40" r="24" fill="white"/>
+        <path d="M12 50 Q24 66 60 50 Q52 64 36 65 Q20 64 12 50Z" fill="#f07820"/>
+        <path d="M12 40 Q24 30 60 40 Q60 50 12 50Z" fill="#0aabab"/>
+        <path d="M14 30 Q26 20 58 30 Q60 35 60 40 Q24 30 12 40 Q12 35 14 30Z" fill="#f07820"/>
+        <path d="M36 16 Q50 16 58 30 Q26 20 14 30 Q21 16 36 16Z" fill="#0aabab"/>
+      </g>
+      <circle cx="36" cy="40" r="24" fill="none" stroke="#ddd" stroke-width="0.5"/>
+      <g transform="translate(36,17)"><polygon points="0,-7 1.6,-2.2 6.6,-2.2 2.8,0.8 4.3,5.6 0,2.8 -4.3,5.6 -2.8,0.8 -6.6,-2.2 -1.6,-2.2" fill="#0aabab"/></g>
+      <text x="74" y="43" font-family="Arial Black,Franklin Gothic Heavy,Impact,sans-serif" font-weight="900" font-size="25" fill="white" letter-spacing="1.5">ZENITH</text>
+      <text x="75" y="57" font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="10.5" fill="#b0b8cc" letter-spacing="4">CORPORATION</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-phone"><a href="tel:+919083420420" style="color:inherit;text-decoration:none;">+91 9083 420 420</a></div>
+  <button class="nav-hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="tag light" style="margin-bottom:1.2rem;"><span>About Zenith Corporation</span></div>
+    <h1>Built on <em>Rigor,</em><br>Driven by Results</h1>
+    <p>A boutique consultancy combining global maritime experience, multinational operations, and strategic advisory to help businesses structure, optimize, and scale.</p>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">Founder-Led Advisory</span>
+    <span class="ticker-item">ISO-Certified Standards</span>
+    <span class="ticker-item">International Operations</span>
+    <span class="ticker-item">AI-Enabled Delivery</span>
+    <span class="ticker-item">Hospitality · Maritime · Finance</span>
+    <span class="ticker-item">Clarity · Control · Growth</span>
+    <span class="ticker-item">Founder-Led Advisory</span>
+    <span class="ticker-item">ISO-Certified Standards</span>
+    <span class="ticker-item">International Operations</span>
+    <span class="ticker-item">AI-Enabled Delivery</span>
+    <span class="ticker-item">Hospitality · Maritime · Finance</span>
+    <span class="ticker-item">Clarity · Control · Growth</span>
+  </div>
+</div>
+
+<!-- ABOUT ZENITH CORP -->
+<section class="section reveal" id="company">
+  <div class="section-head" style="max-width:760px;">
+    <div class="tag">About The Firm</div>
+    <h2 class="section-title" style="margin-bottom:1.5rem;">Zenith Corporation is <em>More Than a Consultancy</em></h2>
+    <p style="font-size:1rem;color:var(--mid);line-height:1.9;">Zenith Corporation is a boutique consultancy dedicated to helping businesses structure, optimize, and scale. With a hands-on, solutions-driven approach, we combine global operational insight with strategic foresight — guiding hospitality ventures, SMEs, and complex projects to navigate challenges, standardize processes, and achieve sustainable growth.</p>
+  </div>
+  <div class="values-grid" style="margin-top:4rem;">
+    <div class="val-card">
+      <div class="val-icon">◈</div>
+      <h3 class="val-title">Founder-Led, Every Time</h3>
+      <p class="val-text">Every client engagement is led directly by the founder. No junior handoffs, no account managers — you work with the expert from day one to project close.</p>
+    </div>
+    <div class="val-card">
+      <div class="val-icon">◎</div>
+      <h3 class="val-title">Outcome-Oriented by Design</h3>
+      <p class="val-text">We define measurable success metrics before every engagement begins, then align every recommendation and deliverable to those outcomes.</p>
+    </div>
+    <div class="val-card">
+      <div class="val-icon">◐</div>
+      <h3 class="val-title">Technology-Augmented Delivery</h3>
+      <p class="val-text">Enterprise-grade AI tools — Claude Pro, Power BI, Notion AI, Lucidchart — are embedded into our workflows to deliver faster, sharper, and more scalable results.</p>
+    </div>
+    <div class="val-card">
+      <div class="val-icon">◇</div>
+      <h3 class="val-title">Expert Network Access</h3>
+      <p class="val-text">Beyond our core capabilities, clients gain access to a curated network of legal, financial, technical, and sector specialists for truly end-to-end advisory.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER BIO -->
+<section class="founder-section reveal" id="founder" style="background:var(--soft);">
+  <div class="founder-badge">
+    <div class="fb-name">Founder &<br>Principal Advisor</div>
+    <div class="fb-title">Zenith Corporation</div>
+    <div class="fb-line"></div>
+    <div class="fb-fact"><span class="fb-fact-icon">◆</span><span class="fb-fact-text">Maritime Operations · 3 Bulk Carriers · Europe, Americas, Asia</span></div>
+    <div class="fb-fact"><span class="fb-fact-icon">◆</span><span class="fb-fact-text">Multinational Corporate · Adobe, Microsoft, Suncorp, 3 Mobile UK</span></div>
+    <div class="fb-fact"><span class="fb-fact-icon">◆</span><span class="fb-fact-text">Hospitality Consultancy since 2022 · SME & Enterprise</span></div>
+    <div class="fb-fact"><span class="fb-fact-icon">◆</span><span class="fb-fact-text">Education: Nautical Sciences · Business Management · Hospitality</span></div>
+    <div class="fb-quote">"Clarity, control, and operational excellence — in every engagement, for every client."</div>
+  </div>
+  <div class="founder-bio">
+    <div class="tag">The Founder</div>
+    <h2>A <em>Rare Blend</em> of Global Operational Expertise</h2>
+    <p>The Founder & Principal Advisor of Zenith Corporation brings a unique combination of global operational expertise, maritime logistics, and strategic consultancy to clients across industries. With experience spanning multinational corporate environments, complex shipping operations, and hospitality consulting, they specialize in transforming unstructured businesses into scalable, efficient operations.</p>
+
+    <h3>Professional Journey</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-period">Early Career</div>
+        <div class="tl-content">
+          <h4>Customer Service & Operations Management</h4>
+          <p>Began at NSquare Technologies, XDBS, WNS, and Tech Mahindra, supporting international clients including Adobe, Microsoft, Suncorp Insurance, and 3 Mobile UK — developing a foundation in corporate operations, client management, and process discipline.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">2015–2018</div>
+        <div class="tl-content">
+          <h4>Junior Operational Officer — Maritime (Deck Officer Equivalent)</h4>
+          <p>Served across three bulk carriers on global routes with MOL (Japan), NKK (Japan), VALE (Brazil), China Ore Shipping, and a Singapore-China joint venture. Managed cargo operations, navigation, watchkeeping (bridge, cargo, anchor, and drifting), and full regulatory compliance — operating across Europe, North & South America, and Asia, including passages across the Equator and International Date Line.</p>
+          <div class="shipping-certs">
+            <span class="cert-badge">ISPS</span><span class="cert-badge">SOLAS</span><span class="cert-badge">MARPOL</span>
+            <span class="cert-badge">MLC</span><span class="cert-badge">GMDSS</span><span class="cert-badge">IMO</span>
+            <span class="cert-badge">UNCLOS</span><span class="cert-badge">COLREGS</span><span class="cert-badge">IMSBC</span>
+            <span class="cert-badge">PSC</span><span class="cert-badge">USCG</span><span class="cert-badge">ILO</span>
+            <span class="cert-badge">SOPEP</span><span class="cert-badge">SMPEP</span><span class="cert-badge">SEEMP</span>
+            <span class="cert-badge">BWM</span>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">Post-Maritime</div>
+        <div class="tl-content">
+          <h4>Full Operational Lead — Private Supply Chain & Trading</h4>
+          <p>Transitioned to Full Operational Lead roles overseeing end-to-end operations, accounts, finance, vendor management, and strategic planning for a trading firm. Managed organizational restructuring, workflow standardization, and executive-level strategic oversight.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-period">2022–Present</div>
+        <div class="tl-content">
+          <h4>Founder & Principal Advisor — Zenith Corporation</h4>
+          <p>Since 2022, exclusive focus on Zenith Corporation — guiding clients in hospitality, SME, and emerging sectors to implement operational frameworks, SOPs, governance structures, and AI-driven process optimizations. Expanded advisory to financial services, real estate, and compliance-heavy industries.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Educational Foundation</h3>
+    <p>Complemented by studies in nautical sciences, business management, and hospitality — bringing a grounded understanding of operational and strategic principles to every client engagement.</p>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band reveal">
+  <h2>Ready to work with a consultant who brings <em>international expertise</em> to your business?</h2>
+  <a href="contact.html" class="btn-primary">Schedule a Consultation</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo-img" aria-label="Zenith Corporation">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" height="54" width="auto" style="display:block;margin-bottom:1.2rem;">
+        <defs><clipPath id="gc2"><circle cx="36" cy="40" r="24"/></clipPath></defs>
+        <rect x="1" y="1" width="238" height="70" rx="11" ry="11" fill="#1b1f3b" stroke="#2a2f5a" stroke-width="1.5"/>
+        <circle cx="36" cy="40" r="24" fill="white" clip-path="url(#gc2)"/>
+        <g clip-path="url(#gc2)">
+          <circle cx="36" cy="40" r="24" fill="white"/>
+          <path d="M12 50 Q24 66 60 50 Q52 64 36 65 Q20 64 12 50Z" fill="#f07820"/>
+          <path d="M12 40 Q24 30 60 40 Q60 50 12 50Z" fill="#0aabab"/>
+          <path d="M14 30 Q26 20 58 30 Q60 35 60 40 Q24 30 12 40 Q12 35 14 30Z" fill="#f07820"/>
+          <path d="M36 16 Q50 16 58 30 Q26 20 14 30 Q21 16 36 16Z" fill="#0aabab"/>
+        </g>
+        <circle cx="36" cy="40" r="24" fill="none" stroke="#ddd" stroke-width="0.5"/>
+        <g transform="translate(36,17)"><polygon points="0,-7 1.6,-2.2 6.6,-2.2 2.8,0.8 4.3,5.6 0,2.8 -4.3,5.6 -2.8,0.8 -6.6,-2.2 -1.6,-2.2" fill="#0aabab"/></g>
+        <text x="74" y="43" font-family="Arial Black,Franklin Gothic Heavy,Impact,sans-serif" font-weight="900" font-size="25" fill="white" letter-spacing="1.5">ZENITH</text>
+        <text x="75" y="57" font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="10.5" fill="#b0b8cc" letter-spacing="4">CORPORATION</text>
+      </svg>
+    </a>
+      <p class="footer-tagline">A boutique consultancy delivering operational strategy, AI integration, feasibility studies, and compliance advisory across India.</p>
+      <div class="footer-contact-info">
+        <div>501, 5th Floor, Shapath 1, SG Highway<br>Bodakdev, Ahmedabad, Gujarat 380054</div>
+        <div style="margin-top:.6rem;"><a href="tel:+919083420420" style="color:var(--gold);text-decoration:none;">+91 9083 420 420</a></div>
+        <div><a href="mailto:info@zencorp.co.in">info@zencorp.co.in</a></div>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Services</h5><ul>
+      <li><a href="services.html#ops">Operational Strategy</a></li>
+      <li><a href="services.html#hr">HR Advisory</a></li>
+      <li><a href="services.html#ai">AI Integration</a></li>
+      <li><a href="services.html#feasibility">Feasibility Studies</a></li>
+      <li><a href="services.html#compliance">Compliance</a></li>
+      <li><a href="services.html#strategy">Strategic Advisory</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Company</h5><ul>
+      <li><a href="about.html">About Zenith</a></li>
+      <li><a href="about.html#founder">The Founder</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Zenith Corporation. All Rights Reserved.</span>
+    <span>zencorp.co.in</span>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

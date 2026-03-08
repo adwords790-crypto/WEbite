@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Zenith Corporation</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.faq-body{padding:8rem 8vw;max-width:880px;}
+.faq-body h1{font-family:var(--serif);font-size:clamp(2rem,4vw,4rem);font-weight:300;color:var(--ink);margin-bottom:3rem;line-height:1.1;}
+.faq-body h1 em{font-style:italic;color:var(--gold);}
+.faq-item{border-bottom:1px solid var(--line);padding:1.8rem 0;cursor:none;}
+.faq-q{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.faq-q .faq-toggle{color:var(--gold);font-size:1.4rem;flex-shrink:0;transition:transform .3s;font-family:var(--sans);font-weight:300;}
+.faq-a{font-size:.9rem;color:var(--mid);line-height:1.85;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;}
+.faq-item.open .faq-a{max-height:600px;padding-top:1rem;}
+.faq-item.open .faq-toggle{transform:rotate(45deg);}
+.faq-a ul{margin:.5rem 0 0 1rem;}
+.faq-a ul li{margin-bottom:.3rem;}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo-img" aria-label="Zenith Corporation">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" height="46" width="auto" style="display:block;">
+      <defs><clipPath id="gc"><circle cx="36" cy="40" r="24"/></clipPath></defs>
+      <rect x="1" y="1" width="238" height="70" rx="11" ry="11" fill="#1b1f3b" stroke="#2a2f5a" stroke-width="1.5"/>
+      <circle cx="36" cy="40" r="24" fill="white" clip-path="url(#gc)"/>
+      <g clip-path="url(#gc)">
+        <circle cx="36" cy="40" r="24" fill="white"/>
+        <path d="M12 50 Q24 66 60 50 Q52 64 36 65 Q20 64 12 50Z" fill="#f07820"/>
+        <path d="M12 40 Q24 30 60 40 Q60 50 12 50Z" fill="#0aabab"/>
+        <path d="M14 30 Q26 20 58 30 Q60 35 60 40 Q24 30 12 40 Q12 35 14 30Z" fill="#f07820"/>
+        <path d="M36 16 Q50 16 58 30 Q26 20 14 30 Q21 16 36 16Z" fill="#0aabab"/>
+      </g>
+      <circle cx="36" cy="40" r="24" fill="none" stroke="#ddd" stroke-width="0.5"/>
+      <g transform="translate(36,17)"><polygon points="0,-7 1.6,-2.2 6.6,-2.2 2.8,0.8 4.3,5.6 0,2.8 -4.3,5.6 -2.8,0.8 -6.6,-2.2 -1.6,-2.2" fill="#0aabab"/></g>
+      <text x="74" y="43" font-family="Arial Black,Franklin Gothic Heavy,Impact,sans-serif" font-weight="900" font-size="25" fill="white" letter-spacing="1.5">ZENITH</text>
+      <text x="75" y="57" font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="10.5" fill="#b0b8cc" letter-spacing="4">CORPORATION</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-phone"><a href="tel:+919083420420" style="color:inherit;text-decoration:none;">+91 9083 420 420</a></div>
+  <button class="nav-hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div style="padding-top:var(--nav-h);">
+<div class="faq-body">
+  <div class="tag">FAQ</div>
+  <h1>Frequently Asked <em>Questions</em></h1>
+
+  <div class="faq-item">
+    <div class="faq-q">What services does Zenith Corporation provide? <span class="faq-toggle">+</span></div>
+    <div class="faq-a"><p>Zenith provides consulting across six core areas: operational strategy and process optimization; organizational and HR advisory; technology and AI integration; feasibility studies and project structuring in hospitality and real estate; compliance and risk management; and strategic advisory and private market search.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What industries does Zenith work with? <span class="faq-toggle">+</span></div>
+    <div class="faq-a"><p>Zenith primarily works with hospitality and real estate projects, small and medium enterprises (SMEs), supply chain and logistics businesses, and financial services firms. The consulting frameworks developed by Zenith can be applied across many industries.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How does Zenith maintain client confidentiality? <span class="faq-toggle">+</span></div>
+    <div class="faq-a"><p>Zenith Corporation follows strict confidentiality practices. Client information shared during engagements is protected through professional discretion and formal agreements where applicable. Any case studies referenced publicly are anonymized unless explicit client permission is granted.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How do I engage Zenith Corporation for consulting services? <span class="faq-toggle">+</span></div>
+    <div class="faq-a"><p>Consulting engagements typically begin with:</p><ul><li>Initial discussion or consultation</li><li>Scope definition</li><li>Engagement letter and agreement</li><li>Project execution and delivery</li></ul><p>You may contact Zenith via the website contact form or by email to initiate a discussion.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Does Zenith provide feasibility studies for hospitality projects? <span class="faq-toggle">+</span></div>
+    <div class="faq-a"><p>Yes. Zenith conducts comprehensive feasibility studies that include market research and competitor mapping, financial modeling (IRR, DSCR analysis), brand positioning recommendations, and project structuring for investors and developers.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Does Zenith work with early-stage businesses? <span class="faq-toggle">+</span></div>
+    <div class="faq-a"><p>Yes. Zenith frequently works with startups and SMEs to help establish structured operations, governance frameworks, and scalable workflows. Early-stage engagements often focus on SOP design, organizational structure, and operational foundations.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Does Zenith provide ongoing advisory after a project? <span class="faq-toggle">+</span></div>
+    <div class="faq-a"><p>Depending on the engagement, Zenith may provide project-based consulting, operational restructuring assignments, or ongoing strategic advisory. Terms are agreed upon at engagement inception.</p></div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What AI and technology tools does Zenith use? <span class="faq-toggle">+</span></div>
+    <div class="faq-a"><p>Zenith integrates enterprise-grade tools including Anthropic Claude Pro, Perplexity Pro, Notion AI, Lucidchart, Power BI, Asana, Argus Enterprise, CoStar, and STR (Smith Travel Research) — selecting the right combination for each engagement's specific requirements.</p></div>
+  </div>
+
+  <div style="margin-top:3rem;">
+    <p style="font-size:.9rem;color:var(--mid);">Have a question not covered here?</p>
+    <a href="contact.html" class="btn-primary" style="margin-top:1rem;display:inline-block;">Get in Touch →</a>
+  </div>
+</div>
+</div>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo-img" aria-label="Zenith Corporation">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" height="54" width="auto" style="display:block;margin-bottom:1.2rem;">
+        <defs><clipPath id="gc2"><circle cx="36" cy="40" r="24"/></clipPath></defs>
+        <rect x="1" y="1" width="238" height="70" rx="11" ry="11" fill="#1b1f3b" stroke="#2a2f5a" stroke-width="1.5"/>
+        <circle cx="36" cy="40" r="24" fill="white" clip-path="url(#gc2)"/>
+        <g clip-path="url(#gc2)">
+          <circle cx="36" cy="40" r="24" fill="white"/>
+          <path d="M12 50 Q24 66 60 50 Q52 64 36 65 Q20 64 12 50Z" fill="#f07820"/>
+          <path d="M12 40 Q24 30 60 40 Q60 50 12 50Z" fill="#0aabab"/>
+          <path d="M14 30 Q26 20 58 30 Q60 35 60 40 Q24 30 12 40 Q12 35 14 30Z" fill="#f07820"/>
+          <path d="M36 16 Q50 16 58 30 Q26 20 14 30 Q21 16 36 16Z" fill="#0aabab"/>
+        </g>
+        <circle cx="36" cy="40" r="24" fill="none" stroke="#ddd" stroke-width="0.5"/>
+        <g transform="translate(36,17)"><polygon points="0,-7 1.6,-2.2 6.6,-2.2 2.8,0.8 4.3,5.6 0,2.8 -4.3,5.6 -2.8,0.8 -6.6,-2.2 -1.6,-2.2" fill="#0aabab"/></g>
+        <text x="74" y="43" font-family="Arial Black,Franklin Gothic Heavy,Impact,sans-serif" font-weight="900" font-size="25" fill="white" letter-spacing="1.5">ZENITH</text>
+        <text x="75" y="57" font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="10.5" fill="#b0b8cc" letter-spacing="4">CORPORATION</text>
+      </svg>
+    </a>
+      <p class="footer-tagline">A boutique consultancy delivering operational strategy, AI integration, feasibility studies, and compliance advisory across India.</p>
+      <div class="footer-contact-info">
+        <div>501, 5th Floor, Shapath 1, SG Highway<br>Bodakdev, Ahmedabad, Gujarat 380054</div>
+        <div style="margin-top:.6rem;"><a href="tel:+919083420420" style="color:var(--gold);text-decoration:none;">+91 9083 420 420</a></div>
+        <div><a href="mailto:info@zencorp.co.in">info@zencorp.co.in</a></div>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Legal</h5><ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Company</h5><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"></div>
+  </div>
+  <div class="footer-bottom"><span>© 2024 Zenith Corporation. All Rights Reserved.</span><span>zencorp.co.in</span></div>
+</footer>
+<script src="main.js"></script>
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Zenith Corporation</title>
+<meta name="description" content="Zenith Corporation's six service verticals: operational strategy, HR advisory, AI integration, feasibility studies, compliance, and strategic advisory.">
+<link rel="stylesheet" href="style.css">
+<style>
+.services-nav{display:flex;gap:0;overflow-x:auto;border-bottom:1px solid var(--line);background:var(--white);position:sticky;top:var(--nav-h);z-index:50;}
+.snav-item{padding:1rem 1.6rem;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--mid);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .3s,border-color .3s;}
+.snav-item:hover{color:var(--ink);border-color:var(--gold);}
+.snav-item.active{color:var(--ink);border-color:var(--gold);}
+
+.svc-section{padding:7rem 8vw;scroll-margin-top:calc(var(--nav-h)+56px);}
+.svc-section:nth-child(even){background:var(--soft);}
+
+.svc-layout{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;}
+.svc-layout.reverse{direction:rtl;}
+.svc-layout.reverse > *{direction:ltr;}
+
+.svc-number{font-family:var(--serif);font-size:8rem;font-weight:700;color:#eeede8;line-height:1;margin-bottom:-1rem;}
+.svc-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,3rem);font-weight:300;color:var(--ink);line-height:1.1;margin-bottom:1.2rem;}
+.svc-title em{font-style:italic;color:var(--gold);}
+.svc-lead{font-size:1rem;color:var(--mid);line-height:1.85;margin-bottom:2rem;}
+
+.svc-bullets{list-style:none;margin-bottom:2rem;}
+.svc-bullets li{display:flex;gap:.8rem;align-items:flex-start;padding:.7rem 0;border-bottom:1px solid var(--line);font-size:.88rem;color:var(--mid);line-height:1.6;}
+.svc-bullets li:last-child{border-bottom:none;}
+.svc-bullets li::before{content:'◆';color:var(--gold);font-size:.4rem;flex-shrink:0;margin-top:.4rem;}
+
+.svc-example{background:var(--ink);padding:1.8rem;margin-top:1.5rem;}
+.ex-label{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem;display:block;}
+.ex-text{font-size:.85rem;color:rgba(250,250,248,.6);line-height:1.7;font-style:italic;}
+
+.svc-visual{background:var(--ink);padding:3rem;position:sticky;top:calc(var(--nav-h)+80px);}
+.svc-visual.light{background:var(--white);border:1px solid var(--line);}
+.sv-stat{text-align:center;padding:2rem;border-bottom:1px solid rgba(200,169,110,.12);}
+.sv-stat:last-child{border-bottom:none;}
+.sv-num{font-family:var(--serif);font-size:3rem;font-weight:300;color:var(--gold-lt);display:block;line-height:1;}
+.sv-cap{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(250,250,248,.4);margin-top:.4rem;display:block;}
+.sv-num.dark-num{color:var(--gold);}
+.sv-cap.dark-cap{color:var(--mid);}
+
+.tools-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
+.tool-badge{font-size:.7rem;letter-spacing:.08em;padding:.4rem .9rem;border:1px solid var(--line);color:var(--mid);transition:border-color .3s,color .3s;}
+.tool-badge:hover{border-color:var(--gold);color:var(--ink);}
+
+@media(max-width:1100px){
+  .svc-layout{grid-template-columns:1fr;gap:2.5rem;}
+  .svc-layout.reverse{direction:ltr;}
+  .svc-visual{position:static;}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo-img" aria-label="Zenith Corporation">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" height="46" width="auto" style="display:block;">
+      <defs><clipPath id="gc"><circle cx="36" cy="40" r="24"/></clipPath></defs>
+      <rect x="1" y="1" width="238" height="70" rx="11" ry="11" fill="#1b1f3b" stroke="#2a2f5a" stroke-width="1.5"/>
+      <circle cx="36" cy="40" r="24" fill="white" clip-path="url(#gc)"/>
+      <g clip-path="url(#gc)">
+        <circle cx="36" cy="40" r="24" fill="white"/>
+        <path d="M12 50 Q24 66 60 50 Q52 64 36 65 Q20 64 12 50Z" fill="#f07820"/>
+        <path d="M12 40 Q24 30 60 40 Q60 50 12 50Z" fill="#0aabab"/>
+        <path d="M14 30 Q26 20 58 30 Q60 35 60 40 Q24 30 12 40 Q12 35 14 30Z" fill="#f07820"/>
+        <path d="M36 16 Q50 16 58 30 Q26 20 14 30 Q21 16 36 16Z" fill="#0aabab"/>
+      </g>
+      <circle cx="36" cy="40" r="24" fill="none" stroke="#ddd" stroke-width="0.5"/>
+      <g transform="translate(36,17)"><polygon points="0,-7 1.6,-2.2 6.6,-2.2 2.8,0.8 4.3,5.6 0,2.8 -4.3,5.6 -2.8,0.8 -6.6,-2.2 -1.6,-2.2" fill="#0aabab"/></g>
+      <text x="74" y="43" font-family="Arial Black,Franklin Gothic Heavy,Impact,sans-serif" font-weight="900" font-size="25" fill="white" letter-spacing="1.5">ZENITH</text>
+      <text x="75" y="57" font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="10.5" fill="#b0b8cc" letter-spacing="4">CORPORATION</text>
+    </svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="services.html">Services</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-phone"><a href="tel:+919083420420" style="color:inherit;text-decoration:none;">+91 9083 420 420</a></div>
+  <button class="nav-hamburger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="tag light" style="margin-bottom:1.2rem;"><span>Our Services</span></div>
+    <h1>Six Verticals of <em>Deep</em> Expertise</h1>
+    <p>From operational SOPs to AI-powered workflows, feasibility studies to compliance frameworks — specialist advisory designed for businesses that demand precision.</p>
+  </div>
+</div>
+
+<!-- SERVICES NAV -->
+<div class="services-nav">
+  <a href="#ops" class="snav-item">01 · Operational Strategy</a>
+  <a href="#hr" class="snav-item">02 · HR Advisory</a>
+  <a href="#ai" class="snav-item">03 · AI Integration</a>
+  <a href="#feasibility" class="snav-item">04 · Feasibility Studies</a>
+  <a href="#compliance" class="snav-item">05 · Compliance</a>
+  <a href="#strategy" class="snav-item">06 · Strategic Advisory</a>
+</div>
+
+<!-- SERVICE 01 -->
+<section class="svc-section reveal" id="ops">
+  <div class="svc-layout">
+    <div>
+      <div class="svc-number">01</div>
+      <div class="tag">Operational Strategy</div>
+      <h2 class="svc-title">Process Optimization &<br><em>Operational Excellence</em></h2>
+      <p class="svc-lead">Zenith Corporation helps businesses systematize workflows, reduce inefficiencies, and scale operations. We bring international operational standards — honed across maritime, multinational corporate, and hospitality environments — to every engagement.</p>
+      <ul class="svc-bullets">
+        <li>Comprehensive process audits and workflow evaluations</li>
+        <li>Designing and implementing Standard Operating Procedures (SOPs) for every department</li>
+        <li>Operational bottleneck identification and efficiency improvement frameworks</li>
+        <li>Governance and accountability structures for teams of all sizes</li>
+        <li>Integration of best practices from international operational standards</li>
+      </ul>
+      <div class="svc-example">
+        <span class="ex-label">Client Example</span>
+        <p class="ex-text">Streamlined staffing and operations for hospitality clients, enabling optimal coverage during peak hours while reducing costs and improving service consistency.</p>
+      </div>
+    </div>
+    <div class="svc-visual">
+      <div class="sv-stat"><span class="sv-num">SOPs</span><span class="sv-cap">Designed for every department</span></div>
+      <div class="sv-stat"><span class="sv-num">ISO</span><span class="sv-cap">Certified Management Systems</span></div>
+      <div class="sv-stat"><span class="sv-num">Intl.</span><span class="sv-cap">Standards Applied</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 02 -->
+<section class="svc-section reveal" id="hr">
+  <div class="svc-layout reverse">
+    <div>
+      <div class="svc-number">02</div>
+      <div class="tag">HR Advisory</div>
+      <h2 class="svc-title">Organizational &<br><em>HR Advisory</em></h2>
+      <p class="svc-lead">We assist businesses in structuring teams and roles to achieve clarity, accountability, and sustainable growth — from org chart design to onboarding frameworks and training programs.</p>
+      <ul class="svc-bullets">
+        <li>Organizational structure assessment and redesign</li>
+        <li>Role clarity, reporting hierarchies, and process ownership</li>
+        <li>Recruitment advisory for permanent and temporary staffing solutions</li>
+        <li>Development of HR frameworks, policies, and employee onboarding</li>
+        <li>Training programs for internal teams to implement best practices</li>
+      </ul>
+      <div class="svc-example">
+        <span class="ex-label">Client Example</span>
+        <p class="ex-text">Designed hybrid shift structures for restaurants to maximize service coverage and reduce employee fatigue while maintaining operational efficiency.</p>
+      </div>
+    </div>
+    <div class="svc-visual light">
+      <div class="sv-stat"><span class="sv-num dark-num">Clarity</span><span class="sv-cap dark-cap">Role and accountability design</span></div>
+      <div class="sv-stat"><span class="sv-num dark-num">Scale</span><span class="sv-cap dark-cap">Frameworks for growing teams</span></div>
+      <div class="sv-stat"><span class="sv-num dark-num">Retain</span><span class="sv-cap dark-cap">Onboarding & training programs</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 03 -->
+<section class="svc-section reveal" id="ai">
+  <div class="svc-layout">
+    <div>
+      <div class="svc-number">03</div>
+      <div class="tag">Technology & AI</div>
+      <h2 class="svc-title">AI & Technology<br><em>Integration</em></h2>
+      <p class="svc-lead">Zenith leverages cutting-edge technology to improve operational decision-making and streamline workflows. We don't just recommend tools — we deploy and integrate them into your daily operations.</p>
+      <ul class="svc-bullets">
+        <li>Implementation of AI-assisted reporting, workflow automation, and CRM systems</li>
+        <li>Integration of Claude Pro, Perplexity Pro, Notion AI, Lucidchart, and Power BI</li>
+        <li>Automation of financial modeling, scenario planning, and operational dashboards</li>
+        <li>Custom digital workflows for reporting, task tracking, and team collaboration</li>
+      </ul>
+      <div class="tools-row">
+        <span class="tool-badge">Claude Pro</span>
+        <span class="tool-badge">Perplexity Pro</span>
+        <span class="tool-badge">Power BI</span>
+        <span class="tool-badge">Notion AI</span>
+        <span class="tool-badge">Lucidchart</span>
+        <span class="tool-badge">Asana</span>
+        <span class="tool-badge">Argus Enterprise</span>
+      </div>
+      <div class="svc-example" style="margin-top:1.5rem;">
+        <span class="ex-label">Client Example</span>
+        <p class="ex-text">Deployed AI-assisted tools for a financial services client, reducing report preparation time by 70% while enabling the team to focus on high-value advisory work.</p>
+      </div>
+    </div>
+    <div class="svc-visual">
+      <div class="sv-stat"><span class="sv-num">70%</span><span class="sv-cap">Average reduction in report prep time</span></div>
+      <div class="sv-stat"><span class="sv-num">7+</span><span class="sv-cap">Enterprise tools deployed</span></div>
+      <div class="sv-stat"><span class="sv-num">AI</span><span class="sv-cap">Operational intelligence integrated</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 04 -->
+<section class="svc-section reveal" id="feasibility">
+  <div class="svc-layout reverse">
+    <div>
+      <div class="svc-number">04</div>
+      <div class="tag">Feasibility Studies</div>
+      <h2 class="svc-title">Feasibility Studies &<br><em>Project Structuring</em></h2>
+      <p class="svc-lead">We provide detailed market, operational, and financial feasibility analysis for new ventures — particularly in hospitality and real estate — delivering investor-ready reports that give stakeholders clear confidence to act.</p>
+      <ul class="svc-bullets">
+        <li>Market research, competitor mapping, and target segment analysis</li>
+        <li>Financial modeling, IRR & DSCR calculations, and risk assessment</li>
+        <li>Recommendations for brand positioning and operator selection</li>
+        <li>Curated reports for investors, architects, and project stakeholders</li>
+      </ul>
+      <div class="tools-row">
+        <span class="tool-badge">CoStar</span>
+        <span class="tool-badge">STR (Smith Travel Research)</span>
+        <span class="tool-badge">Argus Enterprise</span>
+        <span class="tool-badge">Power BI</span>
+        <span class="tool-badge">Claude Pro</span>
+      </div>
+      <div class="svc-example" style="margin-top:1.5rem;">
+        <span class="ex-label">Client Example</span>
+        <p class="ex-text">Conducted a feasibility study for a 150-room upscale resort, identifying a gap in the upper-upscale segment and recommending brand affiliations to maximize investment returns.</p>
+      </div>
+    </div>
+    <div class="svc-visual light">
+      <div class="sv-stat"><span class="sv-num dark-num">17%</span><span class="sv-cap dark-cap">IRR stabilized for resort project</span></div>
+      <div class="sv-stat"><span class="sv-num dark-num">150</span><span class="sv-cap dark-cap">Room resort fully structured</span></div>
+      <div class="sv-stat"><span class="sv-num dark-num">IRR</span><span class="sv-cap dark-cap">& DSCR modeling included</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 05 -->
+<section class="svc-section reveal" id="compliance">
+  <div class="svc-layout">
+    <div>
+      <div class="svc-number">05</div>
+      <div class="tag">Compliance & Risk</div>
+      <h2 class="svc-title">Compliance &<br><em>Risk Management</em></h2>
+      <p class="svc-lead">Zenith ensures your business operates within local, national, and international regulatory frameworks. Our compliance expertise spans maritime, hospitality, and corporate governance — grounded in real-world operational experience across continents.</p>
+      <ul class="svc-bullets">
+        <li>Shipping compliance: ISPS, MLC, SOLAS, GMDSS, MARPOL, PSC, USCG, IMO, UNCLOS, ILO, IMSBC, COLREGS, SOPEP, SMPEP, SEEMP, BWM</li>
+        <li>Hospitality and corporate governance compliance</li>
+        <li>Internal controls, audit readiness, and risk mitigation</li>
+        <li>Standardization of reporting, documentation, and operational checks</li>
+      </ul>
+      <div class="svc-example">
+        <span class="ex-label">Client Example</span>
+        <p class="ex-text">Managed compliance frameworks for global shipping operations across multiple continents, coordinating international stakeholders and ensuring safety and environmental standards were met consistently.</p>
+      </div>
+    </div>
+    <div class="svc-visual">
+      <div class="sv-stat"><span class="sv-num">16+</span><span class="sv-cap">Maritime regulatory frameworks</span></div>
+      <div class="sv-stat"><span class="sv-num">Intl.</span><span class="sv-cap">Multi-continent operations managed</span></div>
+      <div class="sv-stat"><span class="sv-num">Zero</span><span class="sv-cap">Non-compliance incidents on record</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 06 -->
+<section class="svc-section reveal" id="strategy">
+  <div class="svc-layout reverse">
+    <div>
+      <div class="svc-number">06</div>
+      <div class="tag">Strategic Advisory</div>
+      <h2 class="svc-title">Strategic Advisory &<br><em>Private Market Search</em></h2>
+      <p class="svc-lead">We provide high-level guidance for business expansion, acquisitions, and investor engagement — drawing on a curated network of legal, financial, and technical specialists to deliver truly end-to-end solutions.</p>
+      <ul class="svc-bullets">
+        <li>Structuring companies, projects, and assets for financial and operational efficiency</li>
+        <li>Sourcing and evaluating investment opportunities and strategic partnerships</li>
+        <li>Designing frameworks for scalable business growth</li>
+        <li>Leveraging a network of legal, accounting, and financial consultants for end-to-end solutions</li>
+      </ul>
+      <div class="svc-example">
+        <span class="ex-label">Client Example</span>
+        <p class="ex-text">Advised a trading firm and private market clients on operational restructuring, vendor management, and workflow standardization, acting as Full Operational Lead and providing executive-level strategic oversight.</p>
+      </div>
+    </div>
+    <div class="svc-visual light">
+      <div class="sv-stat"><span class="sv-num dark-num">E2E</span><span class="sv-cap dark-cap">End-to-end advisory network</span></div>
+      <div class="sv-stat"><span class="sv-num dark-num">SME</span><span class="sv-cap dark-cap">& enterprise coverage</span></div>
+      <div class="sv-stat"><span class="sv-num dark-num">Scale</span><span class="sv-cap dark-cap">Frameworks for growth</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band reveal">
+  <h2>Not sure which service fits your challenge? <em>Let's talk</em> and find out together.</h2>
+  <a href="contact.html" class="btn-primary">Book a Consultation</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo-img" aria-label="Zenith Corporation">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" height="54" width="auto" style="display:block;margin-bottom:1.2rem;">
+        <defs><clipPath id="gc2"><circle cx="36" cy="40" r="24"/></clipPath></defs>
+        <rect x="1" y="1" width="238" height="70" rx="11" ry="11" fill="#1b1f3b" stroke="#2a2f5a" stroke-width="1.5"/>
+        <circle cx="36" cy="40" r="24" fill="white" clip-path="url(#gc2)"/>
+        <g clip-path="url(#gc2)">
+          <circle cx="36" cy="40" r="24" fill="white"/>
+          <path d="M12 50 Q24 66 60 50 Q52 64 36 65 Q20 64 12 50Z" fill="#f07820"/>
+          <path d="M12 40 Q24 30 60 40 Q60 50 12 50Z" fill="#0aabab"/>
+          <path d="M14 30 Q26 20 58 30 Q60 35 60 40 Q24 30 12 40 Q12 35 14 30Z" fill="#f07820"/>
+          <path d="M36 16 Q50 16 58 30 Q26 20 14 30 Q21 16 36 16Z" fill="#0aabab"/>
+        </g>
+        <circle cx="36" cy="40" r="24" fill="none" stroke="#ddd" stroke-width="0.5"/>
+        <g transform="translate(36,17)"><polygon points="0,-7 1.6,-2.2 6.6,-2.2 2.8,0.8 4.3,5.6 0,2.8 -4.3,5.6 -2.8,0.8 -6.6,-2.2 -1.6,-2.2" fill="#0aabab"/></g>
+        <text x="74" y="43" font-family="Arial Black,Franklin Gothic Heavy,Impact,sans-serif" font-weight="900" font-size="25" fill="white" letter-spacing="1.5">ZENITH</text>
+        <text x="75" y="57" font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="10.5" fill="#b0b8cc" letter-spacing="4">CORPORATION</text>
+      </svg>
+    </a>
+      <p class="footer-tagline">A boutique consultancy delivering operational strategy, AI integration, feasibility studies, and compliance advisory across India.</p>
+      <div class="footer-contact-info">
+        <div>501, 5th Floor, Shapath 1, SG Highway<br>Bodakdev, Ahmedabad, Gujarat 380054</div>
+        <div style="margin-top:.6rem;"><a href="tel:+919083420420" style="color:var(--gold);text-decoration:none;">+91 9083 420 420</a></div>
+        <div><a href="mailto:info@zencorp.co.in">info@zencorp.co.in</a></div>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Services</h5><ul>
+      <li><a href="#ops">Operational Strategy</a></li>
+      <li><a href="#hr">HR Advisory</a></li>
+      <li><a href="#ai">AI Integration</a></li>
+      <li><a href="#feasibility">Feasibility Studies</a></li>
+      <li><a href="#compliance">Compliance</a></li>
+      <li><a href="#strategy">Strategic Advisory</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Company</h5><ul>
+      <li><a href="about.html">About Zenith</a></li>
+      <li><a href="about.html#founder">The Founder</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-col"><h5>Legal</h5><ul>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Zenith Corporation. All Rights Reserved.</span>
+    <span>zencorp.co.in</span>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
